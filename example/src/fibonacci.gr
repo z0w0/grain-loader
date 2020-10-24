@@ -8,4 +8,4 @@ let rec fibonacci = (n) => {
   }
 }
 
-String.concat("21st fibonacci number: ", toString(fibonacci(20)))
+export fibonacci

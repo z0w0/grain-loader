@@ -1,5 +1,5 @@
-const hello = require('./hello.gr');
+const fibbonacci = require('./fibonacci.gr');
 
-hello().then(function(result) {
+fibbonacci().then(function(result) {
   document.getElementById('root').innerHTML = result;
 });

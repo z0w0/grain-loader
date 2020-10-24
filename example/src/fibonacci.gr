@@ -1,0 +1,11 @@
+import String from 'string'
+
+let rec fibonacci = (n) => {
+  if (n == 0 || n == 1) {
+    1
+  } else {
+    fibonacci(n - 1) + fibonacci(n - 2)
+  }
+}
+
+String.concat("21st fibonacci number: ", toString(fibonacci(20)))

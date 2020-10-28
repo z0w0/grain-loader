@@ -9,10 +9,8 @@ This loader is extremely rough and mostly serves as a exploration into what comp
 
 ## Caveats
 
-* It depends on my [feat/buffer-modules](https://github.com/z0w0/grain/tree/feat/buffer-modules) branch of Grain which adds loading modules from array buffers to the Grain runtime.
-* It's pretty much only just working.
-* The Grain runtime is injected with every `.gr` file that gets loaded at the moment.
-* All dependencies of a single Grain file are included in the bundled code rather than required separately.
+- The Grain runtime is injected with every `.gr` file that gets loaded at the moment.
+- All dependencies of a single Grain file are included in the bundled code rather than required separately.
 
 ## Alternative implementations
 

@@ -1,4 +1,10 @@
 import String from 'string'
 import { fibonacci } from './fibonacci'
 
-String.concat("21st fibonacci number: ", toString(fibonacci(20)))
+import foreign js alert : String -> Void from 'window'
+
+let result = String.concat("21st fibonacci number: ", toString(fibonacci(20)))
+
+alert(result);
+
+result;

@@ -1,5 +1,9 @@
 const fibbonacci = require('./main.gr');
 
-fibbonacci().then(function(result) {
+fibbonacci({
+  window: {
+    alert: window.alert
+  }
+}).then(function(result) {
   document.getElementById('root').innerHTML = result;
 });

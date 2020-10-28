@@ -64,7 +64,7 @@ const detectImports = async (wasm: Buffer): Promise<Set<string>> => {
   return new Set(fields
     .filter(({ type }) => type === 'ModuleImport')
     .map(({ module }) => module.replace('GRAIN$MODULE$', ''))
-    .filter(module => !RUNTIME_MODULES.includes(module)));
+    .filter(module => !RUNTIME_MODULES.includes(module) && !module.startsWith('js/')));
 };
 
 const resolveImport = async ({

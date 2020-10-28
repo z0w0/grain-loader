@@ -28,7 +28,9 @@ export default (grainRuntime: string, modules: Record<string, Buffer>, wasm: Buf
       grainModules[${JSON.stringify(name)}] = runner.loadBuffer(${wasmToString(modules[name])})
     `)}
 
-    module.exports = function() {
+    module.exports = function(imports) {
+      if (imports && runner.addJSImports) runner.addJSImports(imports);
+
       return runner
         .runBufferUnboxed(${wasmToString(wasm)})
         .then(function(result) {
